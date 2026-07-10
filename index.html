@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhavika Aswani — AI Developer & Freelance Digital Specialist</title>
+  <meta name="description" content="Bhavika Aswani is an AI Developer & Freelance Digital Specialist building AI agents, websites, and travel CRM systems, and driving growth through video editing and social media strategy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portstyle.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- THREE.JS Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="logo-dot"></span>
+      <span>BA</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" data-text="About">About</a></li>
+      <li><a href="#services" data-text="Strategy">Strategy</a></li>
+      <li><a href="#work" data-text="Work">Work</a></li>
+      <li><a href="#results" data-text="Results">Results</a></li>
+      <li><a href="#contact" data-text="Contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn-nav">Let's Talk</a>
+    </div>
+  </nav>
+
+  <!-- HERO / INTRO SCENE -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-tag reveal-up" style="--delay:0.2s">
+        <span class="tag-dot"></span>
+        <span>AI Developer & Digital Specialist</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="line reveal-clip" style="--delay:0.4s">Bhavika</span>
+        <span class="line reveal-clip" style="--delay:0.6s">Aswani<span class="accent-dot">.</span></span>
+      </h1>
+      <p class="hero-sub reveal-up" style="--delay:0.9s">
+        I build <em>AI-powered systems</em> and digital experiences —<br/>
+        from websites and CRMs to content that connects and converts.
+      </p>
+      <div class="hero-actions reveal-up" style="--delay:1.1s">
+        <a href="#services" class="btn-primary">
+          <span>Explore My Strategy</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#work" class="btn-ghost">View Case Studies</a>
+      </div>
+      <div class="hero-metrics reveal-up" style="--delay:1.3s">
+        <div class="metric">
+          <span class="metric-num" data-target="1">0</span><span class="metric-unit">+</span>
+          <span class="metric-label">Year Experience</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-num" data-target="2">0</span><span class="metric-unit">+</span>
+          <span class="metric-label">Websites Designed</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-num" data-target="10">0</span><span class="metric-unit">+</span>
+          <span class="metric-label">AI & Digital Skills</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to begin the journey</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="section-tag reveal-up">
+            <span class="tag-dot"></span> The Origin
+          </div>
+          <h2 class="section-title reveal-up" style="--delay:0.1s">
+            Where Strategy<br/><span class="text-gradient">Meets Velocity</span>
+          </h2>
+          <div class="about-visual reveal-up" style="--delay:0.2s">
+            <div class="about-card">
+              <div class="card-glow"></div>
+              <div class="card-initials">BA</div>
+              <div class="card-orbit">
+                <div class="orbit-ring orbit-ring--1"></div>
+                <div class="orbit-ring orbit-ring--2"></div>
+                <div class="orbit-dot orbit-dot--1"></div>
+                <div class="orbit-dot orbit-dot--2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-text reveal-up" style="--delay:0.15s">
+            I hold a Master's in Computer Applications (MCA) and specialise in AI solutions, website design, video editing, social media management, and ad campaign strategy — a blend that lets me build technology that's also genuinely usable.
+          </p>
+          <p class="about-text reveal-up" style="--delay:0.25s">
+            At SkyJade Travel, I designed and developed the company website end-to-end, built a full Travel CRM system to manage bookings and operations, developed AI-based solutions to automate customer interactions, and led social media content, engagement, and ad creatives.
+          </p>
+          <div class="about-skills reveal-up" style="--delay:0.35s">
+            <div class="skill-pill">Canva (Expert)</div>
+            <div class="skill-pill">Prompt Engineering</div>
+            <div class="skill-pill">AI Agent Development</div>
+            <div class="skill-pill">AI Tools & Automation</div>
+            <div class="skill-pill">Animation</div>
+            <div class="skill-pill">AI Design Tools</div>
+            <div class="skill-pill">WordPress Website Design</div>
+            <div class="skill-pill">Video Editing (VN/InShot/CapCut)</div>
+            <div class="skill-pill">Social Media Management</div>
+            <div class="skill-pill">CRM Development</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / STRATEGY JOURNEY -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal-up"><span class="tag-dot"></span> The Strategy Journey</div>
+        <h2 class="section-title reveal-up" style="--delay:0.1s">
+          Five Chapters of <br/><span class="text-gradient">Scalable Growth</span>
+        </h2>
+        <p class="section-desc reveal-up" style="--delay:0.2s">
+          Every engagement follows a battle-tested narrative — from discovery to dominance. Here's how we write your brand's next chapter.
+        </p>
+      </div>
+
+      <div class="journey-path">
+        <div class="journey-line"></div>
+
+        <div class="journey-step reveal-left" data-step="01">
+          <div class="step-number">01</div>
+          <div class="step-card">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </div>
+            <h3>Research</h3>
+            <p>Every project starts with deep research into what's actually performing — trending formats, audience behaviour, and competitor content — before a single idea is finalised.</p>
+            <div class="step-tags">
+              <span>Trend Analysis</span><span>Audience Research</span><span>Competitor Study</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-step journey-step--right reveal-right" data-step="02">
+          <div class="step-number">02</div>
+          <div class="step-card">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Scripting</h3>
+            <p>Turning research into a clear, hook-driven script — structured to grab attention in the first few seconds and hold it till the very end.</p>
+            <div class="step-tags">
+              <span>Hook Writing</span><span>Storyboarding</span><span>Content Structure</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-step reveal-left" data-step="03">
+          <div class="step-number">03</div>
+          <div class="step-card">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Video Shoot</h3>
+            <p>Bringing the script to life on camera — planning shots, lighting, and framing to make sure every scene is ready for a polished edit.</p>
+            <div class="step-tags">
+              <span>Shot Planning</span><span>Framing</span><span>On-Camera Direction</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-step journey-step--right reveal-right" data-step="04">
+          <div class="step-number">04</div>
+          <div class="step-card">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Video Edit & Posting</h3>
+            <p>Editing for pace and impact — cuts, transitions, captions, and sound design — then publishing at the right time for maximum reach.</p>
+            <div class="step-tags">
+              <span>Editing</span><span>Captions & Sound</span><span>Scheduling</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-step reveal-left" data-step="05">
+          <div class="step-number">05</div>
+          <div class="step-card">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
+            <h3>Ads</h3>
+            <p>Putting the best-performing content behind paid promotion — targeting the right audience to turn views into real, measurable reach.</p>
+            <div class="step-tags">
+              <span>Paid Promotion</span><span>Audience Targeting</span><span>Performance Tracking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT PHILOSOPHY -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal-up"><span class="tag-dot"></span> My Content Approach</div>
+        <h2 class="section-title reveal-up" style="--delay:0.1s">
+          The Philosophy <br/><span class="text-gradient">Behind My Content</span>
+        </h2>
+      </div>
+      <div class="work-grid">
+        <div class="work-card reveal-up" style="--delay:0.1s">
+          <div class="work-card-glow"></div>
+          <div class="work-meta"><span class="work-tag">Research</span></div>
+          <h3>Deep Research, Not Guesswork</h3>
+          <p>Every piece of content starts with deep research into what's actually performing on social media — tracking what gets the most likes and reach — before a single post is created.</p>
+        </div>
+
+        <div class="work-card reveal-up" style="--delay:0.2s">
+          <div class="work-card-glow"></div>
+          <div class="work-meta"><span class="work-tag">Psychology</span></div>
+          <h3>Content That Connects Emotionally</h3>
+          <p>I build content around human psychology, connecting with people's emotions rather than just pushing information at them.</p>
+        </div>
+
+        <div class="work-card reveal-up" style="--delay:0.3s">
+          <div class="work-card-glow"></div>
+          <div class="work-meta"><span class="work-tag">Brand Value</span></div>
+          <h3>Beyond the Money Funnel</h3>
+          <p>Content isn't just a money funnel — it's brand visibility. It shows who the brand is and what value it truly stands for.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO RESULTS: Website Design / Video Editing / CRM -->
+  <section class="results section" id="results">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal-up"><span class="tag-dot"></span> Portfolio Results</div>
+        <h2 class="section-title reveal-up" style="--delay:0.1s">
+          Proof Across <br/><span class="text-gradient">Every Discipline</span>
+        </h2>
+        <p class="section-desc reveal-up" style="--delay:0.2s">
+          A closer look at what's actually been shipped — websites designed, videos edited, and systems built.
+        </p>
+      </div>
+
+      <!-- ===== WEBSITE DESIGN ===== -->
+      <div class="result-category reveal-up" style="--delay:0.1s">
+        <div class="result-category-head">
+          <span class="result-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><circle cx="5.5" cy="6.5" r="0.6" fill="currentColor"/><circle cx="7.5" cy="6.5" r="0.6" fill="currentColor"/></svg>
+          </span>
+          <h3>Website Design</h3>
+        </div>
+        <div class="result-grid">
+
+          <!-- RESULT CARD: WEBSITE 1 -->
+          <div class="result-card">
+            <div class="result-media">
+              <img src="src/skyjade-website.jpg" alt="SkyJade Travel Website" class="result-img" />
+              <a href="https://skyjadetravel.com/" target="_blank" rel="noopener" class="result-link">View Live Site →</a>
+            </div>
+            <div class="result-body">
+              <h4>SkyJade Travel Website</h4>
+              <p>Designed and developed a professional travel website with focus on user-friendly UI/UX and booking management.</p>
+            </div>
+          </div>
+
+          <!-- RESULT CARD: WEBSITE 2 -->
+          <div class="result-card">
+            <div class="result-media">
+              <img src="src/divi-website.jpg" alt="Divi Travels Consultancy Website" class="result-img" />
+              <a href="https://divitravelsconsultancy.com/" target="_blank" rel="noopener" class="result-link">View Live Site →</a>
+            </div>
+            <div class="result-body">
+              <h4>Client Project — Divi Travels Consultancy</h4>
+              <p>Created a modern, responsive layout to showcase professional consultancy services.</p>
+            </div>
+          </div>
+
+          <!-- RESULT CARD: WEBSITE 3 -->
+          <div class="result-card">
+            <div class="result-media">
+              <img src="src/ecomm.jpeg" alt="Fashion E-commerce Demo Website" class="result-img" />
+              <a href="https://ecommbhavika.github.io/ecom-demo/" target="_blank" rel="noopener" class="result-link">View Live Site →</a>
+            </div>
+            <div class="result-body">
+              <h4>Fashion E-commerce (Demo Project)</h4>
+              <p>A demo e-commerce website built for a fashion brand, showcasing product listings and a clean shopping experience.</p>
+            </div>
+          </div>
+
+          <!-- RESULT CARD: WEBSITE 4 (Self-referential - this portfolio) -->
+          <div class="result-card">
+            <div class="result-media">
+              <img src="src/my-portfolio.jpeg" alt="This Portfolio Website" class="result-img" />
+              <span class="result-badge">🟢 Live Preview — You're Viewing It</span>
+            </div>
+            <div class="result-body">
+              <h4>This Portfolio (You're Looking At It)</h4>
+              <p>Designed and built end-to-end: Three.js particle background, custom cursor, scroll animations, and an AI-powered digital twin chatbot.</p>
+            </div>
+          </div>
+
+          <!-- RESULT CARD: WEBSITE 5 (LUMIÈRE Skincare Demo) -->
+          <div class="result-card">
+            <div class="result-media">
+              <img src="src/skincare.jpeg" alt="LUMIÈRE Skincare Website" class="result-img" />
+              <a href="https://bhavikaaswani.github.io/skincares/" target="_blank" rel="noopener" class="result-link">View Live Site →</a>
+            </div>
+            <div class="result-body">
+              <h4>LUMIÈRE — Luxury Skincare (Demo Project)</h4>
+              <p>A demo e-commerce website for a luxury skincare brand, featuring elegant product storytelling, ingredient highlights, and a refined shopping experience.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===== VIDEO EDITING ===== -->
+      <div class="result-category reveal-up" style="--delay:0.15s">
+        <div class="result-category-head">
+          <span class="result-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </span>
+          <h3>Content & Video Editing</h3>
+        </div>
+        <div class="result-grid">
+
+          <!-- RESULT CARD: VIDEO 1 -->
+          <div class="result-card">
+            <div class="result-media result-media--video result-media--reel">
+              <video controls loop playsinline preload="metadata" class="result-video">
+                <source src="src/us-visa.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="result-body">
+              <h4>US Visa</h4>
+              <p>Edited and produced for social media, focused on scroll-stopping visuals and pacing.</p>
+            </div>
+          </div>
+
+          <!-- RESULT CARD: VIDEO 2 -->
+          <div class="result-card">
+            <div class="result-media result-media--video result-media--reel">
+              <video controls loop playsinline preload="metadata" class="result-video">
+                <source src="src/schengen-visa.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="result-body">
+              <h4>Schengen Visa</h4>
+              <p>Edited and produced for social media, focused on scroll-stopping visuals and pacing.</p>
+            </div>
+          </div>
+
+          <!-- RESULT CARD: VIDEO 3 -->
+          <div class="result-card">
+            <div class="result-media result-media--video result-media--reel">
+              <video controls loop playsinline preload="metadata" class="result-video">
+                <source src="src/vietnam-tour.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="result-body">
+              <h4>Vietnam Tour</h4>
+              <p>Edited and produced for social media, focused on scroll-stopping visuals and pacing.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===== CRM ===== -->
+      <div class="result-category reveal-up" style="--delay:0.2s">
+        <div class="result-category-head">
+          <span class="result-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </span>
+          <h3>CRM System</h3>
+        </div>
+        <div class="result-grid">
+
+          <!-- RESULT CARD: CRM 1 -->
+          <div class="result-card">
+            <div class="result-media result-media--video">
+              <video controls autoplay muted loop playsinline preload="auto" class="result-video force-muted">
+                <source src="src/travel-crm.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="result-body">
+              <h4>Travel CRM Software</h4>
+              <p>Multi-module Streamlit-based Travel CRM — leads, client lifecycle, itineraries, invoicing, and agent permissions.</p>
+            </div>
+          </div>
+
+          <!-- RESULT CARD: CRM 2 -->
+          <div class="result-card">
+            <div class="result-media result-media--video">
+              <video controls muted loop playsinline preload="metadata" class="result-video force-muted">
+                <source src="src/visa.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="result-body">
+              <h4>Visa Verification Software</h4>
+              <p>A dedicated tool built to streamline visa document verification, reducing manual checks and speeding up the approval process.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="section-tag reveal-up"><span class="tag-dot"></span> Start the Journey</div>
+          <h2 class="section-title reveal-up" style="--delay:0.1s">
+            Ready to <br/><span class="text-gradient">Ignite Growth?</span>
+          </h2>
+          <p class="contact-sub reveal-up" style="--delay:0.2s">
+            Whether you need a full growth overhaul or a targeted campaign, let's build something that moves the needle. Fill in the form and I'll be in touch within 24 hours.
+          </p>
+          <div class="contact-info reveal-up" style="--delay:0.3s">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>bhavikaaswani35@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91-9462210291</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right reveal-up" style="--delay:0.2s">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="e.g. Alex Thompson" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@company.com" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Company</label>
+                <input type="text" placeholder="Your brand name" />
+              </div>
+              <div class="form-group">
+                <label>Budget Range</label>
+                <select>
+                  <option value="">Select range</option>
+                  <option>₹50K – ₹2L / mo</option>
+                  <option>₹2L – ₹5L / mo</option>
+                  <option>₹5L+ / mo</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>What's Your Growth Goal?</label>
+              <textarea placeholder="Describe your current challenge and the outcome you're aiming for..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-dot"></span>
+          <span>Bhavika Aswani</span>
+        </div>
+        <p class="footer-copy">© 2025 Bhavika Aswani. All rights reserved. Crafting growth, one strategy at a time.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI ORB / DIGITAL TWIN -->
+  <div class="ai-orb-container" id="aiOrb">
+    <div class="orb-tooltip" id="orbTooltip">
+      <p id="tooltipText">Meet my Digital Twin</p>
+    </div>
+    <div class="orb-wrapper" id="orbWrapper">
+      <div class="orb-outer-ring"></div>
+      <div class="orb-mid-ring"></div>
+      <div class="orb-core">
+        <div class="orb-inner-glow"></div>
+        <span class="orb-initials">AI</span>
+      </div>
+      <div class="orb-pulse"></div>
+    </div>
+    <span class="orb-label">Digital Twin</span>
+  </div>
+
+  <!-- CHAT PANEL -->
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-header">
+      <div class="chat-avatar-mini">BA</div>
+      <div>
+        <div class="chat-name">Bhavika's Digital Twin</div>
+        <div class="chat-status"><span class="status-dot"></span> Active now</div>
+      </div>
+      <button class="chat-close" id="chatClose">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-msg ai-msg" id="introMsg" style="display:none">
+          <p>Hi! I am Bhavika Aswani's digital twin. I'm here to help you revolutionize your growth strategy. How can I assist you today? 🚀</p>
+        </div>
+      </div>
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button class="suggestion-btn" data-msg="Tell me about yourself">About Bhavika</button>
+        <button class="suggestion-btn" data-msg="How can I contact you?">Contact info</button>
+        <button class="suggestion-btn" data-msg="What is your content philosophy?">Content philosophy</button>
+        <button class="suggestion-btn" data-msg="How do you approach a project from start to finish?">Your work process</button>
+        <button class="suggestion-btn" data-msg="How do I get started working with you?">Get started</button>
+      </div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Ask me anything..." />
+      <button id="chatSend">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- THREE.JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="portscript.js"></script>
+</body>
+</html>
