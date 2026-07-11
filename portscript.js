@@ -193,6 +193,26 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 }, { passive: true });
 
+/* ======================================================
+   3b. MOBILE NAV MENU
+   ====================================================== */
+const navBurger = document.getElementById('navBurger');
+const mobileNav = document.getElementById('mobileNav');
+
+if (navBurger && mobileNav) {
+  navBurger.addEventListener('click', () => {
+    navBurger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navBurger.classList.remove('open');
+      mobileNav.classList.remove('open');
+    });
+  });
+}
+
 
 /* ======================================================
    4. SCROLL REVEAL (IntersectionObserver)
