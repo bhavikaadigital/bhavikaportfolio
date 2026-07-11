@@ -272,38 +272,30 @@ function closeChat() {
   chatPanel.classList.remove('open');
 }
 
-// ── First Interaction Trigger (TTS) ──
-// FIX (real cause): orb click handler used e.stopPropagation(), so the
-// old document-level 'click' listener that showed the intro message
-// NEVER fired on the orb click itself — it only fired later on some
-// other click, which is why the message felt "delayed". Now it's
-// called directly from the orb click, so it's instant.
-function triggerFirstInteraction() {
-  if (firstInteractionDone) return;
-  firstInteractionDone = true;
-
-  showIntroMessage();
-  speakIntro();
-}
-
 aiOrb.addEventListener('click', (e) => {
   e.stopPropagation();
-  if (chatOpen) {
-    closeChat();
-  } else {
-    openChat();
-    triggerFirstInteraction();
-  }
+  if (chatOpen) closeChat();
+  else openChat();
 });
 chatClose.addEventListener('click', (e) => {
   e.stopPropagation();
   closeChat();
 });
 
+// ── First Interaction Trigger (TTS) ──
+function triggerFirstInteraction() {
+  if (firstInteractionDone) return;
+  firstInteractionDone = true;
+
+  openChat();
+  showIntroMessage();
+  speakIntro();
+}
+
+document.addEventListener('click', triggerFirstInteraction, { once: true });
+document.addEventListener('keydown', triggerFirstInteraction, { once: true });
+
 function showIntroMessage() {
-  // FIX: removed the opacity/transform fade-in delay (setTimeout 100ms +
-  // 0.5s transition) that made the message feel like it was "arriving late".
-  // Message now shows fully visible instantly.
   introMsg.style.display = 'block';
   introMsg.style.opacity = '1';
   introMsg.style.transform = 'translateY(0)';
@@ -444,22 +436,43 @@ chatInput.addEventListener('keydown', (e) => {
 
 
 /* ======================================================
-   8. CONTACT FORM
+   8. CONTACT FORM (Web3Forms integration)
    ====================================================== */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('.btn-submit');
     const original = btn.innerHTML;
-    btn.innerHTML = '<span>Message Sent! ✓</span>';
-    btn.style.background = 'linear-gradient(135deg, #06efb8, #00c8ff)';
     btn.disabled = true;
+    btn.innerHTML = '<span>Sending...</span>';
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        btn.innerHTML = '<span>Message Sent! ✓</span>';
+        btn.style.background = 'linear-gradient(135deg, #06efb8, #00c8ff)';
+        contactForm.reset();
+      } else {
+        btn.innerHTML = '<span>Something went wrong. Try again.</span>';
+        btn.style.background = 'linear-gradient(135deg, #e0567a, #a83232)';
+      }
+    } catch (err) {
+      btn.innerHTML = '<span>Network error. Try again.</span>';
+      btn.style.background = 'linear-gradient(135deg, #e0567a, #a83232)';
+    }
+
     setTimeout(() => {
       btn.innerHTML = original;
       btn.style.background = '';
       btn.disabled = false;
-      contactForm.reset();
     }, 3500);
   });
 }
