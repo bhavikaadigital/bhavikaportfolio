@@ -28,7 +28,11 @@
 
 /* ======== RESET ======== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 body {
   background: var(--bg);
@@ -37,6 +41,7 @@ body {
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
+  max-width: 100%;
   cursor: none;
 }
 
@@ -1049,9 +1054,9 @@ body:has(a:hover, button:hover, .orb-wrapper:hover) .cursor-follower {
 @media (max-width: 900px) {
   .nav { padding: 18px 24px; }
   .nav.scrolled { padding: 12px 24px; }
-  .nav-links { display: none; }
-  .nav-cta { display: none; }
-  .nav-burger { display: flex; }
+  .nav-links { display: none !important; }
+  .nav-cta { display: none !important; }
+  .nav-burger { display: flex !important; }
   .hero { padding: 100px 24px 70px; }
   .container { padding: 0 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
