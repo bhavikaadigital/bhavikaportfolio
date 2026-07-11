@@ -566,5 +566,16 @@ document.querySelectorAll('video.force-muted').forEach((vid) => {
 });
 
 /* ======================================================
-   13. GLITCH EFFECT ON HERO NAME (subtle) — continued above
+   13. TOUCH DEVICE: DISABLE CUSTOM CURSOR
+   (Custom cursor + cursor:none relies on mousemove events
+   which never fire on touch — this makes the real
+   pointer/cursor visible again on phones/tablets)
    ====================================================== */
+(function handleTouchCursor() {
+  const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  if (isTouch) {
+    document.body.style.cursor = 'auto';
+    if (cursor) cursor.style.display = 'none';
+    if (cursorFollower) cursorFollower.style.display = 'none';
+  }
+})();
